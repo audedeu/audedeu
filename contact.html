@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <title>Formulaire de contact</title>
+</head>
+
+<body class="bodyContact">
+
+  <!--MENU-->
+  <div class="burger">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Accueil</a>
+    <a href="#">Qui suis-je ?</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <h1>Contactez-moi</h1>
+  <p class="dialogue">
+    Allez à la source ! Dites-m'en plus sur vous et votre projet. Sa réalisation n'en sera que plus aboutie ! :) </p>
+
+
+  <!--fichier php traitement à aller chercher cf fabien fichier-->
+  <main class="contactForm">
+
+
+    <form method="post" action="traitement.php">
+      <fieldset class="vous">
+
+
+        <legend>Parlez-moi un peu de vous</legend>
+        <div class="blocForm">
+          <!--le nom blocform a été trouvé par Fabien, je m'inspire de ce qu'il a fait pour me corriger-->
+          <div>
+            <label for="nom">Nom*</label>
+            <input type="text" name="nom" id="nom" placeholder="Votre nom" required rows="4" />
+            <label for="telephone">Téléphone*</label>
+            <input type="text" name="telephone" id="telephone" placeholder="06..." rows="4" />
+          </div>
+          <div>
+            <label for="email">E-Mail*</label>
+            <input type="text" name="email" id="email" placeholder="contact@mail.com" required rows="4" />
+
+
+            <label for="site">Site Web (si vous en avez)</label>
+            <input type="text" name="site" id="site" placeholder="www.example.com" rows="4" />
+          </div>
+        </div>
+
+
+
+
+      </fieldset>
+
+      <fieldset class="projet">
+        <legend>Comment puis-je vous aider ?</legend>
+        <div class="blocForm2">
+          <div>
+            <label for="web"> Site Web </label>
+            <input type="radio" name="typeProjet" value="web" id="web" />
+          </div>
+
+          <div>
+            <label for="identite"> Identité Visuelle </label>
+            <input type="radio" name="typeProjet" value="identite" id="identite" />
+          </div>
+
+          <div>
+            <label for="redaction"> Rédaction de contenus</label>
+            <input type="radio" name="typeProjet" value="redaction" id="redaction" />
+          </div>
+        </div>
+
+      </fieldset>
+
+      <div class="blocForm3">
+        <div>
+          <label for="ville">Où vous situez-vous ?</label><br />
+          <select name="ville" id="ville">
+    <option value="lille"> Lille et métropole</option>
+    <option value="hdf">Région Hauts-de-France</option>
+    <option value="autreregion">Autre région</option>
+  </select> </div>
+        <div>
+          <label for="message">Détails supplémentaires (concept, objectifs, effets recherchés...)</label><br />
+          <textarea name="message" id="message" rows="8" cols="80" placeholder="Tapez ici votre message" required></textarea>
+
+          <input type="submit" value="Envoyer" />
+          <input type="reset" value="Réinitialiser" />
+        </div>
+
+      </div>
+
+    </form>
+
+  </main>
+
+  <!--Javascript pour le menu-->
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+</body>
+
+</html>
